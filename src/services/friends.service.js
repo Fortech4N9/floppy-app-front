@@ -25,9 +25,9 @@ class FriendsService {
     }
   }
 
-  addFriend(token, friend) {
+  addFriend(token, id) {
     try {
-      return axios.post(API_GATEWAY_URL + 'add-friend/' + friend.id, {}, {
+      return axios.post(API_GATEWAY_URL + 'add-friend/' + id, {}, {
         headers: {
           'Content-Type': 'application/json',
           'Authorization': `Bearer ${token}`,
@@ -46,9 +46,9 @@ class FriendsService {
     }
   }
 
-  deleteFriend(token, friend) {
+  deleteFriend(token, id) {
     try {
-      return axios.post(API_GATEWAY_URL + 'delete-friend/' + friend.id, {}, {
+      return axios.post(API_GATEWAY_URL + 'delete-friend/' + id, {}, {
         headers: {
           'Content-Type': 'application/json',
           'Authorization': `Bearer ${token}`,

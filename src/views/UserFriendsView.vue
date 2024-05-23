@@ -7,7 +7,10 @@
           <ul class="list-group">
             <li class="list-group-item" v-for="friend in friends" :key="friend.id">
               <div class="row">
-                <div class="col-md-8">
+                <div class="col-md-4 text-left">
+                  <img src="../images/icons/icons8-avatar.gif">
+                </div>
+                <div class="col-md-4">
                   <router-link :to="{ name: 'FriendProfileView', props: { user: friend.receiver} }">
                     {{ friend.receiver.firstName }} {{ friend.receiver.lastName }}
                   </router-link>
@@ -64,7 +67,7 @@ export default {
     async deleteFriend(token, id) {
       try {
         await FriendsService.deleteFriend(token, id);
-        this.friends = this.friends.filter((friend) => friend.id !== id);
+        this.friends = this.friends.filter((friend) => friend.receiver.id !== id);
       } catch (error) {
         console.error("Ошибка при добавлении друга:", error);
       }
@@ -72,3 +75,9 @@ export default {
   },
 };
 </script>
+
+<style>
+.col-md-4{
+  margin: auto;
+}
+</style>

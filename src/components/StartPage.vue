@@ -6,7 +6,7 @@
         <button @click="openPopup" class="btn btn-primary">Открыть</button>
       </div>
     </div>
-    <PopupAuthComponent v-if="showPopup" @create="redirectToRegister" @login="redirectToLogin" />
+    <PopupAuthComponent v-if="showPopup" @close="showPopup = false" @create="redirectToRegister" @login="redirectToLogin" />
   </div>
   <div v-else>
     <nav class="links">

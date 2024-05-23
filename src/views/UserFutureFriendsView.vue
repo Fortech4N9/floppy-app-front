@@ -7,13 +7,16 @@
           <ul class="list-group">
             <li class="list-group-item" v-for="friend in friends" :key="friend.id">
               <div class="row">
-                <div class="col-md-8">
+                <div class="col-md-4 text-left">
+                  <img src="../images/icons/icons8-avatar.gif">
+                </div>
+                <div class="col-md-4">
                   <router-link :to="{ name: 'FriendProfileView', props: { user: friend} }">
                     {{ friend.firstName }} {{ friend.lastName }}
                   </router-link>
                 </div>
                 <div class="col-md-4 text-right">
-                  <button class="btn btn-sm" @click="addFriend(token, friend.id)">
+                  <button class="btn btn-primary" @click="addFriend(token, friend.id)">
                     Добавить
                   </button>
                 </div>
@@ -63,6 +66,7 @@ export default {
     },
     async addFriend(token, id) {
       try {
+        console.log(id)
         await FriendsService.addFriend(token, id);
         this.friends = this.friends.filter((friend) => friend.id !== id);
       } catch (error) {
@@ -78,5 +82,9 @@ export default {
   display: flex;
   gap: 20px;
   justify-content: center;
+}
+
+.col-md-4{
+  margin: auto;
 }
 </style>

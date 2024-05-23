@@ -45,4 +45,10 @@ export default {
   border-radius: 4px;
   margin: 30px auto;
 }
+.accordion{
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin: auto;
+}
 </style>
