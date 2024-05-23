@@ -9,8 +9,10 @@
     <PopupAuthComponent v-if="showPopup" @create="redirectToRegister" @login="redirectToLogin" />
   </div>
   <div v-else>
-    <nav>
+    <nav class="links">
       <router-link to="/profile">Твой профиль, {{ user.firstName }}</router-link>
+      <router-link to="/your-friends">Твои друзья</router-link>
+      <router-link to="/your-future-friends">Твои будущие друзья</router-link>
     </nav>
   </div>
 </template>
@@ -45,5 +47,9 @@ export default {
 </script>
 
 <style scoped>
-
+  .links{
+    gap: 20px;
+    display: flex;
+    justify-content: center;
+  }
 </style>

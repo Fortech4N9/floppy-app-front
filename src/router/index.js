@@ -22,6 +22,22 @@ const routes = [
     name: 'login',
     component: () => import(/* webpackChunkName: "about" */ '../views/LoginView.vue')
   },
+  {
+    path: '/your-friends',
+    name: 'your-friends',
+    component: () => import('../views/UserFriendsView.vue')
+  },
+  {
+    path: '/your-future-friends',
+    name: 'your-future-friends',
+    component: () => import('../views/UserFutureFriendsView.vue')
+  },
+  {
+    path: '/friend-profile',
+    name: 'FriendProfileView',
+    component: () => import('../views/FriendProfileView.vue')
+  },
+
 ]
 
 const router = createRouter({
