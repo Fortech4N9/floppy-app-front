@@ -13,7 +13,7 @@
       <h1>Вы не вошли в аккаунт</h1>
       <div class="accordion">
         <router-link to="/register">Зарегестрируйся</router-link>
-        <router-link to="/register">Авторизуйся</router-link>
+        <router-link to="/login">Авторизуйся</router-link>
       </div>
     </div>
   </div>

@@ -12,7 +12,6 @@ class FriendsService {
         },
       }).then(response => {
         if (response.status === 200 && response.data) {
-          console.log(response.data);
           return response.data;
         } else {
           console.error('Error fetching future friends:', response.status, response.data);
@@ -67,7 +66,7 @@ class FriendsService {
     }
   }
 
-  getFriendList(token) {
+  getFriendList(token, user) {
     try {
       return axios.get(API_GATEWAY_URL + 'my-friends', {
         headers: {
@@ -76,8 +75,17 @@ class FriendsService {
         },
       }).then(response => {
         if (response.status === 200 && response.data) {
-          console.log(response.data);
-          return response.data;
+          const friendsRelation = response.data;
+          if (friendsRelation.length > 0) {
+
+            return friendsRelation.map((friendRelation) => {
+              if (friendRelation.creator.id === user.id) {
+                return friendRelation.receiver;
+              }
+              return friendRelation.creator;
+            });
+          }
+          return [];
         } else {
           console.error('Error fetching user friends:', response.status, response.data);
           return [];

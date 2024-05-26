@@ -8,10 +8,12 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "@angular/core": "^18.0.0",
     "axios": "^1.6.8",
     "bootstrap": "^5.3.3",
     "bootstrap-vue": "^2.23.1",
     "core-js": "^3.8.3",
+    "socket.io-client": "^4.7.5",
     "vue": "^3.2.13",
     "vue-router": "^4.3.2"
   },

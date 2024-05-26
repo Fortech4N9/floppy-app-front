@@ -70,8 +70,6 @@ nav a.router-link-exact-active {
   padding-bottom: 80px; /* Высота футера */
 }
 footer{
-
-
   vertical-align: center;
   margin-top: -80px;
   color: white;

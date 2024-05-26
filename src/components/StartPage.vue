@@ -52,4 +52,8 @@ export default {
     display: flex;
     justify-content: center;
   }
+  .justify-content-center {
+    display: flex;
+    justify-content: center;
+  }
 </style>
