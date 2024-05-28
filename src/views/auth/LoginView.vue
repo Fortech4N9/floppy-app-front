@@ -16,8 +16,8 @@
 </template>
 
 <script>
-import LoginComponent from '../components/LoginComponent.vue';
-import AuthService from '../services/auth.service';
+import LoginComponent from '../../components/auth/LoginComponent.vue';
+import AuthService from '../../services/auth.service';
 
 export default {
   name: 'LoginView',

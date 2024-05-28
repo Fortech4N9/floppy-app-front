@@ -68,7 +68,7 @@ export default {
   <div class="chat-container">
     <div class="chat-header">
       <div class="user-avatar">
-        <img src="../images/icons/icons8-avatar.gif" alt="Аватар друга">
+        <img src="../../images/icons/icons8-avatar.gif" alt="Аватар друга">
       </div>
       <div class="user-name">{{ friend.firstName }}</div>
     </div>

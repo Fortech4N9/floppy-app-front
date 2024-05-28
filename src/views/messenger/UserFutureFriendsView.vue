@@ -8,7 +8,7 @@
             <li class="list-group-item" v-for="friend in friends" :key="friend.id">
               <div class="row">
                 <div class="col-md-4 text-left">
-                  <img src="../images/icons/icons8-avatar.gif">
+                  <img src="../../images/icons/icons8-avatar.gif">
                 </div>
                 <div class="col-md-4">
                   <router-link :to="{ name: 'FriendProfileView', props: { user: friend} }">
@@ -66,7 +66,6 @@ export default {
     },
     async addFriend(token, id) {
       try {
-        console.log(id)
         await FriendsService.addFriend(token, id);
         this.friends = this.friends.filter((friend) => friend.id !== id);
       } catch (error) {

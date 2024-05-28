@@ -10,32 +10,32 @@ const routes = [
   {
     path: '/profile',
     name: 'profile',
-    component: () => import(/* webpackChunkName: "about" */ '../views/ProfileView.vue')
+    component: () => import(/* webpackChunkName: "about" */ '../views/Profile/ProfileView.vue')
   },
   {
     path: '/register',
     name: 'register',
-    component: () => import(/* webpackChunkName: "about" */ '../views/RegisterView.vue')
+    component: () => import(/* webpackChunkName: "about" */ '../views/auth/RegisterView.vue')
   },
   {
     path: '/login',
     name: 'login',
-    component: () => import(/* webpackChunkName: "about" */ '../views/LoginView.vue')
+    component: () => import(/* webpackChunkName: "about" */ '../views/auth/LoginView.vue')
   },
   {
     path: '/your-friends',
     name: 'your-friends',
-    component: () => import('../views/UserFriendsView.vue')
+    component: () => import('../views/messenger/UserFriendsView.vue')
   },
   {
     path: '/your-future-friends',
     name: 'your-future-friends',
-    component: () => import('../views/UserFutureFriendsView.vue')
+    component: () => import('../views/messenger/UserFutureFriendsView.vue')
   },
   {
-    path: '/friend-profile',
+    path: '/friend-profile/:userId', // Добавляем :userId для параметра
     name: 'FriendProfileView',
-    component: () => import('../views/FriendProfileView.vue')
+    component: () => import('../views/Profile/FriendProfileView.vue')
   },
 
 ]

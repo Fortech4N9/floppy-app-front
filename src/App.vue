@@ -12,7 +12,7 @@
   </div>
   <footer>
     <div class="container footer">
-      <span class="footer-title">При поддержке кафедры ЭВМ и Бинарных псов</span>
+      <span class="footer-title">При поддержке ИВТ-FAM и Бинарных псов</span>
     </div>
   </footer>
 </template>

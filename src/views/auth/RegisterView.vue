@@ -16,8 +16,8 @@
 </template>
 
 <script>
-import RegisterComponent from '../components/RegisterComponent.vue';
-import AuthService from '../services/auth.service';
+import RegisterComponent from '../../components/auth/RegisterComponent.vue';
+import AuthService from '../../services/auth.service';
 
 export default {
   name: 'RegisterView',

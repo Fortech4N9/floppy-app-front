@@ -18,7 +18,7 @@
 </template>
 
 <script>
-import PopupAuthComponent from '../components/PopupAuthComponent.vue';
+import PopupAuthComponent from './auth/PopupAuthComponent.vue';
 import AuthService from '../services/auth.service';
 
 export default {

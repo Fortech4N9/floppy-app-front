@@ -19,7 +19,7 @@ export default {
   <div class="popup" @click="closePopup">
     <div class="popup-content" @click.stop>
       <img
-          src="../images/icons/icons8-close.svg"
+          src="../../images/icons/icons8-close.svg"
           id="close-auth-popup"
           class="auth-popup-close"
           @click="closePopup"

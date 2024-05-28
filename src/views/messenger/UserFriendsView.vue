@@ -14,13 +14,14 @@
             >
                   <div class="row">
                     <div class="col-md-4">
-                      <img class="avatar" src="../images/icons/icons8-avatar.gif">
-                      <img class="check-user"  v-if="friend.isActive" src="../images/icons/check.png">
+                      <img class="avatar" src="../../images/icons/icons8-avatar.gif">
+                      <img class="check-user"  v-if="friend.isActive" src="../../images/icons/check.png">
                     </div>
                     <div class="col-md-8">
-                      <router-link :to="{ name: 'FriendProfileView', props: { user: friend} }">
+                      <router-link :to="{ name: 'FriendProfileView', params: { userId: friend.id } }">
                       {{ friend.firstName }} {{ friend.lastName }}
-                    </router-link></div>
+                    </router-link>
+                    </div>
                   </div>
 <!--                <div class="col-md-4 text-right">-->
 <!--                  <button class="btn btn-danger btn-sm" @click="deleteFriend(token, friend.receiver.id)">-->
@@ -58,7 +59,7 @@
 import AuthService from "@/services/auth.service";
 import FriendsService from "@/services/friends.service";
 import {PresenceService} from "@/services/presence.service";
-import ChatComponent from "@/components/ChatComponent.vue";
+import ChatComponent from "@/components/chat/ChatComponent.vue";
 
 export default {
   name: "UserFriendsView",
@@ -107,7 +108,7 @@ export default {
     async setActiveFriend(friend) {
       this.activeFriend = friend;
     },
-  },
+  }
 };
 </script>
 
