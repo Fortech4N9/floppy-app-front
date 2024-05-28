@@ -11,7 +11,7 @@
                   <img src="../../images/icons/icons8-avatar.gif">
                 </div>
                 <div class="col-md-4">
-                  <router-link :to="{ name: 'FriendProfileView', props: { user: friend} }">
+                  <router-link :to="{ name: 'FriendProfileView', params: { userId: friend.id } }">
                     {{ friend.firstName }} {{ friend.lastName }}
                   </router-link>
                 </div>

@@ -33,7 +33,7 @@ const routes = [
     component: () => import('../views/messenger/UserFutureFriendsView.vue')
   },
   {
-    path: '/friend-profile/:userId', // Добавляем :userId для параметра
+    path: '/friend-profile/:userId',
     name: 'FriendProfileView',
     component: () => import('../views/Profile/FriendProfileView.vue')
   },
